@@ -6,18 +6,18 @@ public class Automobil {
     private String model; 
     private String matricula; 
 
-    public static int numAuto = 0;
+    public static int totalAutos = 0;
    
     // Constructor amb tots els atributs
     Automobil(String marca, String model, String matricula) {
         this.marca = marca;
         this.model = model;
         this.matricula = matricula;
-        numAuto ++;
+        totalAutos ++;
     }
 
     // Constructor buit incrementa el número d'automòbils creats
-    Automobil(){ numAuto ++; }
+    Automobil(){ totalAutos ++; }
     
     // Setters i Getters
     public String getMarca() {
@@ -45,7 +45,7 @@ public class Automobil {
 
     // Mètode per mostrar la informació de l'automòbil
     public String mostrarDades() {
-        return ("Marca: " + marca + ", Model: " + model + ", Matricula: " + matricula);
+        return ("Marca: " + marca + ", Model: " + model + ", Matricula: " + matricula + " Numero d'automòbils creats: " + totalAutos);
     }
    
     /**
